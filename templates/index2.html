@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br/>
+<center>
+<h1>Hello 
+		{% if f_name =="John" %}
+			{{f_name}}!!
+		{% else %}
+			There!!
+		{% endif %}
+</h1>
+</center>
+
+<br/>
+<br/>
+
+<ul>
+{% for toppings in favourite_pizza %}
+	<li>{{toppings}}</li>
+{% endfor %}
+</ul>	
+
+<a href="{{ url_for('about')}}">About me</a>
+
+{% endblock %}
